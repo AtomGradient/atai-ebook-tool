@@ -51,7 +51,7 @@ def main():
         image_path = os.path.join(images_folder, filename)
         with open(image_path, "wb") as img_file:
             img_file.write(content)
-        print(f"Wrote image {filename} to {image_path}")
+            # print(f"Wrote image {filename} to {image_path}")
 
 if __name__ == "__main__":
     main()
