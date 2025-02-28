@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "atai-ebook-tool"
-version = "0.0.1"
-description = "A CLI tool to convert or extract text from e-books using ebook-convert"
+version = "0.0.2"
+description = "A command-line tool for parsing ebooks (such as EPUB and MOBI) and converting them into a structured JSON file."
 readme = "README.md"
 authors = [
     {name = "AtomGradient", email = "alex@atomgradient.com"}
@@ -20,7 +20,8 @@ keywords = ["pdf", "ocr", "text-extraction", "document-processing"]
 requires-python = ">=3.7"
 dependencies = [
     "ebooklib",
-    "beautifulsoup4"
+    "beautifulsoup4",
+    "mobi"
 ]
 
 [project.urls]
