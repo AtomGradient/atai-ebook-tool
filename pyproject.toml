@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "atai-ebook-tool"
+version = "0.0.1"
+description = "A CLI tool to convert or extract text from e-books using ebook-convert"
+readme = "README.md"
+authors = [
+    {name = "AtomGradient", email = "alex@atomgradient.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+keywords = ["pdf", "ocr", "text-extraction", "document-processing"]
+requires-python = ">=3.7"
+dependencies = [
+    "ebooklib",
+    "beautifulsoup4"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/AtomGradient/atai-ebook-tool"
+"Bug Tracker" = "https://github.com/AtomGradient/atai-ebook-tool/issues"
+
+[project.scripts]
+atai-ebook-tool = "atai_ebook_tool.cli:main"
