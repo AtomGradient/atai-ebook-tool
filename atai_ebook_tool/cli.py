@@ -2,7 +2,12 @@ import argparse
 import json
 import os
 import re
+import warnings
 from atai_ebook_tool import parser
+
+# Suppress specific warnings from ebooklib.epub
+warnings.filterwarnings("ignore", category=UserWarning, module="ebooklib.epub")
+warnings.filterwarnings("ignore", category=FutureWarning, module="ebooklib.epub")
 
 def sanitize_filename(name):
     """
