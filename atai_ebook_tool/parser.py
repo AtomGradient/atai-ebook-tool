@@ -91,7 +91,7 @@ def parse_epub(file_path):
             except AttributeError:
                 content = item.get_content()
             formatted = format_html_content(content, epub_images, image_mapping, image_counter)
-            chapters[f"chapter {chapter_counter}"] = formatted
+            chapters[f"chapter_{chapter_counter}"] = formatted
             chapter_counter += 1
 
     # Build new_images mapping: new filename -> binary content.
@@ -237,7 +237,7 @@ def parse_mobi(file_path):
                 chapter_html = "".join(str(elem) for elem in chapter_elems)
                 # Format (images, annotations) with the shared helper function.
                 formatted_chapter = format_html_content(chapter_html, mobi_images, image_mapping, image_counter)
-                chapters[f"chapter {chapter_counter}"] = f"{chapter_title}\n\n{formatted_chapter}"
+                chapters[f"chapter_{chapter_counter}"] = f"{chapter_title}\n\n{formatted_chapter}"
                 chapter_counter += 1
 
             # Build new_images from image_mapping
