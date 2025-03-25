@@ -136,8 +136,7 @@ def parse_mobi(file_path):
     # 3. Extract the MOBI file into a temporary folder.
     tempdir, extracted_path = mobi.extract(file_path)
     ext = os.path.splitext(extracted_path)[1].lower()
-    bookname = os.path.splitext(file_path)[0].lower()
-
+    bookname = os.path.splitext(os.path.basename(file_path))[0].lower()
 
     # We'll store our results here.
     data = {}
