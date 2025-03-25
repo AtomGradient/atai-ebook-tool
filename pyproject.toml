@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "atai-ebook-tool"
-version = "0.0.5"
+version = "0.0.6"
 description = "A command-line tool for parsing ebooks (such as EPUB and MOBI) and converting them into a structured JSON file."
 readme = "README.md"
 authors = [
