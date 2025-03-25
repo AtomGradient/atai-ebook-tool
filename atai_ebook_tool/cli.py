@@ -13,7 +13,7 @@ def sanitize_filename(name):
     """
     Sanitize folder name by replacing characters not allowed in filenames.
     """
-    return re.sub(r'[\\/*?:"<>|]', "_", name)
+    return re.sub(r'[\\/*?:"<>| ]', "_", name)
 
 def main():
     arg_parser = argparse.ArgumentParser(
